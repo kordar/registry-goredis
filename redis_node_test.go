@@ -11,7 +11,7 @@ import (
 
 func TestRedisRegistry_Get(t *testing.T) {
 	client := redis.NewUniversalClient(&redis.UniversalOptions{
-		Addrs:    []string{"192.168.30.16:30202"},
+		Addrs:    []string{"43.139.223.7:8088"},
 		Password: "940430Dex",
 		DB:       2,
 	})
@@ -20,7 +20,7 @@ func TestRedisRegistry_Get(t *testing.T) {
 		Prefix:  "ABC",
 		Node:    "123.12.34.2:3320",
 		Timeout: time.Second * 30,
-		Channel: "TTTT",
+		Channel: "BOB",
 		Reload: func(value []string, channel string) {
 			log.Println("--------------", value, channel)
 		},

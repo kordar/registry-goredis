@@ -116,8 +116,8 @@ func (r *RedisNodeRegistry) reload(channel string) {
 		for _, v := range vv {
 			data = append(data, v.(string))
 		}
-	}
-	if r.options.Reload != nil {
-		r.options.Reload(data, channel)
+		if r.options.Reload != nil {
+			r.options.Reload(data, channel)
+		}
 	}
 }
