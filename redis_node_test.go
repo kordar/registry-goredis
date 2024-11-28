@@ -11,7 +11,7 @@ import (
 
 func TestRedisRegistry_Get(t *testing.T) {
 	client := redis.NewUniversalClient(&redis.UniversalOptions{
-		Addrs:    []string{"43.139.223.7:8088"},
+		Addrs:    []string{"xxxx"},
 		Password: "940430Dex",
 		DB:       2,
 	})
