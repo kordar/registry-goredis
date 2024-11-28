@@ -20,14 +20,13 @@ func TestRedisRegistry_Get(t *testing.T) {
 		Prefix:  "ABC",
 		Node:    "123.12.34.2:3320",
 		Timeout: time.Second * 30,
-		Channel: "BOB",
+		Channel: "TTTT",
 		Reload: func(value []string, channel string) {
 			log.Println("--------------", value, channel)
 		},
 		Heartbeat: time.Second * 3,
 	})
 	redisnoderegistry.Listener()
-	time.Sleep(5 * time.Second)
 	_ = redisnoderegistry.Register()
 
 	registry2 := registry_goredis.NewRedisNodeRegistry(client, &registry_goredis.RedisNodeRegistryOptions{
